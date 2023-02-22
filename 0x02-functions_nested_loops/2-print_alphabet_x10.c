@@ -1,13 +1,12 @@
 #include "main.h"
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_alphabet_x10 - check the code
  */
 void print_alphabet_x10(void)
 {
-        char c;
+	char c;
 	int a;
+
 	for (a = 1; a <= 10; a++)
 	{
 		for (c = 'a'; c <= 'z'; c++)
