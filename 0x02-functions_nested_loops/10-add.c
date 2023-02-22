@@ -1,26 +1,11 @@
-#include <stdio.c>
+#include "main.h"
 /**
  * add - a function that add two number
- * a - int  parameter
- * b - int  parameter
- * Return: Always a + b
+ * @a: int  parameter
+ * @b: int  parameter
+ * Return: Integer value
  */
-int add(int a, int b);
-
-/**
- * main - Entry point
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	int n;
-
-	n = add(89, 9);
-	printf("%d\n", n);
-	return (0);
-}
-int add(int, int)
+int add(int a, int b)
 {
 	return (a + b);
 }
-
