@@ -38,6 +38,6 @@ int length(char *s)
 
 void _print_rev_recursion(char *s)
 {
-	s = s + length(s);
+	s = s + length(s)-1;
 	_print(s);
 }
