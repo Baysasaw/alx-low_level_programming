@@ -21,7 +21,7 @@ void _print(char *s)
  */
 char *length(char *s)
 {
-	if (*(s + count) != '\0')
+	if (*s != '\0')
 	{
 		s++;
 		s = length(s);
