@@ -3,15 +3,28 @@
  * _print - a function that prints a string in reverse
  * @s: a string
  */
-void _print(char *s)
+int length(char *s);
+void _print(char *s, int *l);
+/**
+ * _print_rev_recursion -  function that prints a string in reverse
+ * @s: string
+ */
+
+void _print_rev_recursion(char *s)
 {
-	if (*s == '\n')
+	_print(s, length(s));
+}
+
+void _print(char *s, int *l)
+{
+
+	if (*l == 0)
 		_putchar(*s);
 	else
 	{
-		_putchar(*s);
-		s--;
-		_print(s);
+		_putchar(*(s + l));
+		l--;
+		_print((s + l), l);
 	}
 }
 /**
@@ -30,14 +43,4 @@ int length(char *s)
 		s++;
 		return(1 + length(s));
 	}
-}
-/**
- * _print_rev_recursion -  function that prints a string in reverse
- * @s: string
- */
-
-void _print_rev_recursion(char *s)
-{
-	s = s + length(s)-1;
-	_print(s);
 }
