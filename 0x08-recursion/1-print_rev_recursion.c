@@ -19,14 +19,17 @@ void _print(char *s)
  * @s: string
  * Return: number of characters
  */
-char *length(char *s)
+int length(char *s)
 {
-	if (*s != '\0')
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	else
 	{
 		s++;
-		s = length(s);
+		return(1 + length(s));
 	}
-	return (s);
 }
 /**
  * _print_rev_recursion -  function that prints a string in reverse
@@ -35,6 +38,6 @@ char *length(char *s)
 
 void _print_rev_recursion(char *s)
 {
-	s = length(s);
+	s = s + length(s);
 	_print(s);
 }
