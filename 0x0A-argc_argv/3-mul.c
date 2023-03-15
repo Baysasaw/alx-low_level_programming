@@ -4,7 +4,7 @@
  * main - a program that multiplies two numbers
  * @argc:number of arguments
  * @argv:array of arguments
- * return:multiplies two numbers
+ * Return:multiplies two numbers
  */
 int main(int argc, char *argv[])
 {
