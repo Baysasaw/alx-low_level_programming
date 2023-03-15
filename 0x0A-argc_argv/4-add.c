@@ -12,12 +12,13 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!(atoi(argv[i])))
+		if (atoi(argv[i]))
+			add = add + atoi(argv[i]);
+		else
 		{
 			printf("Error\n");
 			return (1);
 		}
-		add = add + atoi(argv[i]);
 	}
 	printf("%d\n", add);
 	return (0);
