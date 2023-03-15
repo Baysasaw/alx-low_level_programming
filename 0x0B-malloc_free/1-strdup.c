@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+include <stdlib.h>
 
 /**
  * _strdup - a function that allocates to a space in memory
@@ -17,9 +17,10 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	while (str[i] != '\n')
+	t = malloc(*str);
+	while (str[i] != '\0')
 	{
-		t = malloc(*str);
+		
 		if (t == NULL)
 			return (NULL);
 		t[i] = str[i];
