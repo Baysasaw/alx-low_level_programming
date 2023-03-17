@@ -11,11 +11,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	char  *t;
 	unsigned int i;
 
-	t = malloc(sizeof(unsigned int) * size);
-	if (nmemb == 0 || size == 0 || t == NULL)
+	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
+	t = malloc(sizeof(nmemb * size));
 	for (i = 0; i < size; i++)
 	{
 		t[i] = nmemb;
