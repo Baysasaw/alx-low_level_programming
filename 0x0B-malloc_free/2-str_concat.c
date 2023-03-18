@@ -20,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		l1++;
 	}
-	while(s2[l2])
+	while (s2[l2])
 	{
 		l2++;
 	}
