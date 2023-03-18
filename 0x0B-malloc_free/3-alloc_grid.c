@@ -3,22 +3,32 @@
 #include <stdio.h>
 int **alloc_grid(int width, int height)
 {
+	int i, j;
+	int **t;
 	if (width < 0 || height < 0)
 	{
 		return (NULL);
 	}
-	else
+	t = malloc(sizeof(int) * height);
+	if (t == NULL)
+		return NULL;
+
+	for(i = 0; i < height;  i++)
 	{
-		int i, j;
-		int **t;
-		t = malloc(sizeof(int) * (width * height));
-		for(i = 0; i < height; i++)
+		t[i] = malloc(sizeof(int) * width);
+
+		if (t[i] == NULL)
 		{
-			for(j = 0; j < width; j++)
-			{
-				t[i][j] = 0;
-			}
+			for(;i >= 0; i--)
+				free(t[i]);
+			free(t);
+			return(NULL);
 		}
-		return 0;
 	}
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+			t[i][j] = 0;
+	}
+	return (t);
 }
