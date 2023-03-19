@@ -23,7 +23,6 @@ int Nword(char *str)
 	}
 	return (words);
 }
-
 /**
  * strtow - a function that splits a string
  * @str: a string
