@@ -1,11 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+
 /**
  * Nword - a function that returns the number of words
  * @str: a string
  * Return: the number of words in the string
  */
+
 int Nword(char *str)
 {
 	int is_a_space = 0, words = 0, i;
@@ -22,11 +24,13 @@ int Nword(char *str)
 	}
 	return (words);
 }
+
 /**
  * strtow - a function that splits a string
  * @str: a string
  * Return: a pointer to the splited string
  */
+
 char **strtow(char *str)
 {
 	char **strs;
