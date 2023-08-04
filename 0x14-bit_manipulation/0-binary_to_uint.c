@@ -15,11 +15,10 @@ unsigned int binary_to_uint(const char *b)
 	if (b[len] == '\0')
 		return (0);
 
-	while((b[len] == '0') || (b[len] == '1'))
+	for(;(b[len] == '0') || (b[len] == '1');len++)
 	{
 		num <<= 1;
 		num += b[len] - '0';
-		len++;
 	}
 
 	return (num);
